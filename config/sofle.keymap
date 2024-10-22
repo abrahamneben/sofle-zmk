@@ -78,7 +78,7 @@
             tap-ms = <1>;
             bindings = <&kp MINUS &kp LS(E)>;
             label = "RT_ARROW";
-        }
+        };
 
         dbl_dash: dbl_dash {
             compatible = "zmk,behavior-macro";
@@ -86,7 +86,7 @@
             tap-ms = <1>;
             bindings = <&kp MINUS &kp MINUS>;
             label = "DBL_DASH";
-        }
+        };
 
         up5: up5 {
             compatible = "zmk,behavior-macro";
