@@ -48,7 +48,7 @@
         up10: up10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp UP &kp UP &kp UP &kp UP &kp UPs &kp UP &kp UP &kp UP &kp UP &kp UP>;
+            bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP>;
             label = "UP10";
         };
 
