@@ -97,12 +97,21 @@
         };
 
         sticky_command_shift {
-            bindings = <&sk LS(LEFT_META)>;
+            bindings = <&shift_command>;
             key-positions = <45 46>;
         };
     };
 
     macros {
+        shift_command: shift_command {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <1>;
+            bindings = <&kp LS(LEFT META)>;
+            label = "SHIFT_COMMAND";
+        };
+
+        }
         rt_arrov: rt_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -169,7 +178,7 @@
 &mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                            &kp Y   &kp U     &kp I      &kp O     &kp P     &kp LBKT
 &mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SPACE
 &kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &none   &kp RBKT  &kp BSLH   &kp RGUI
+                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &kp CAPS   &kp RBKT  &kp BSLH   &kp RGUI
             >;
 
             sensor-bindings =
