@@ -190,7 +190,7 @@
             display-name = "mod";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans       &trans       &trans    &trans         &trans  &kp BACKSPACE
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                                   &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(MINUS)
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                                   &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
 &trans      &kp LSHFT     &none         &none         &trans        &none                                   &down5       &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans      &trans       &trans       &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &bootloader   &sys_reset    &sys_reset  &bootloader  &trans       &trans    &trans
