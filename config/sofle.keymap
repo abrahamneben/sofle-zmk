@@ -160,14 +160,12 @@
 
         default_layer {
             display-name = "default";
-
-
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                              &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
-&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                               &kp Y      &kp U      &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SPACE
-&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none      &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp MINUS  &mo EQUAL  &kp ESC       &kp SPACE  &mo RBKT  &kp BSLH  &kp RALT   &kp RGUI
+&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                    &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                                     &kp Y   &kp U     &kp I      &kp O     &kp P     &kp LBKT
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                           &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SPACE
+&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B            &kp C_MUTE    &none      &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                             &kp LGUI  &kp LALT  &kp EQUAL  &none            &kp ESC       &kp SPACE  &none   &kp RBKT  &kp BSLH   &kp RGUI
             >;
 
             sensor-bindings =
@@ -177,8 +175,6 @@
 
         lower_layer {
             display-name = "lower";
-
-
             bindings = <
 &trans     &kp F1     &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8     &kp F9     &kp F10   &kp F11
 &kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp F12
@@ -192,14 +188,12 @@
 
         mod_layer {
             display-name = "mod";
-
-
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans  &trans       &trans    &trans         &trans   &kp LA(BACKSPACE)
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                                   &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp N0   &trans
-&trans      &kp LSHFT     &none         &none         &trans        &none                                   &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp DEL  &kp SQT
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans      &trans  &trans       &trans    &trans         &trans   &trans
-                          &trans        &trans        &trans       &bootloader    &sys_reset    &sys_reset  &bootloader  &trans  &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans       &trans       &trans    &trans         &trans  &kp BACKSPACE
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                                   &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(MINUS)
+&trans      &kp LSHFT     &none         &none         &trans        &none                                   &down5       &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
+&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans      &trans       &trans       &trans    &trans         &trans  &trans
+                          &trans        &trans        &trans        &bootloader   &sys_reset    &sys_reset  &bootloader  &trans       &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -207,11 +201,9 @@
 
         modopt_layer {
             display-name = "modopt";
-
-
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                          &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &kp LA(BACKSPACE)
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                           &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans      &kp LSHFT     &none         &none         &trans        &none                           &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
@@ -222,11 +214,9 @@
 
         modctrl_layer {
             display-name = "modctrl";
-
-
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                         &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                           &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans      &none         &kp LSHFT     &none         &trans        &none                           &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
