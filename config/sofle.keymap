@@ -66,10 +66,26 @@
     };
 
     macros {
+        rt_arrov: rt_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <1>;
+            bindings = <&kp MINUS &kp LS(E)>;
+            label = "RT_ARROW";
+        }
+
+        dbl_dash: dbl_dash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <1>;
+            bindings = <&kp MINUS &kp MINUS>;
+            label = "DBL_DASH";
+        }
+
         up5: up5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
             bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP>;
             label = "UP5";
         };
@@ -77,7 +93,7 @@
         down5: down5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
             bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
             label = "DOWN5";
         };
@@ -85,7 +101,7 @@
         up10: up10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
             bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP>;
             label = "UP10";
         };
@@ -93,7 +109,7 @@
         down10: down10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tap-ms = <5>;
+            tap-ms = <1>;
             bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
             label = "DOWN10";
         };
@@ -115,14 +131,14 @@
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // | ENTER |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | ENTER |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   | SPACE |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //               | GUI | ALT  | CTRL | LOWER|  ESC |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
 &kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                              &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                               &kp Y      &kp U      &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SPACE
 &kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none      &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                              &kp LGUI  &kp LALT  &kp LCTRL  &mo LOWER  &kp ESC       &kp SPACE  &mo RAISE  &kp RCTRL  &kp RALT   &kp RGUI
             >;
@@ -160,14 +176,14 @@
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
             // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | -     |
             // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans       &trans    &trans         &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans       &trans    &trans         &trans   &kp LA(BACKSPACE)
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp N0   &trans
-&trans      &kp LSHFT     &none         &none         &trans        &none                           &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp DEL  &kp BSPC
+&trans      &kp LSHFT     &none         &none         &trans        &none                           &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp DEL  &kp MINUS
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans  &trans       &trans    &trans         &trans   &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans       &trans    &trans
             >;
@@ -181,14 +197,14 @@
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
             // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |       | rt_arrov|
             // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans   &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans   &kp LC(BACKSPACE)
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &up10    &kp HOME      &kp UP    &kp END        &kp N0   &trans
-&trans      &kp LSHFT     &none         &none         &trans        &none                           &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &kp DEL  &kp BSPC
+&trans      &kp LSHFT     &none         &none         &trans        &none                           &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none  &rt_arrov
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans   &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
             >;
@@ -202,14 +218,14 @@
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
             // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |       | --    |
             // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans   &trans
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &up10    &kp HOME      &kp UP    &kp END        &kp N0   &trans
-&trans      &none         &kp LSHFT     &none         &trans        &none                           &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &kp DEL  &kp BSPC
+&trans      &none         &kp LSHFT     &none         &trans        &none                           &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none  &dbl_dash
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans   &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
             >;
