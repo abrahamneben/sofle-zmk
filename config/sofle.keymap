@@ -35,6 +35,7 @@
         up5: up5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
             bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP>;
             label = "UP5";
         };
@@ -42,12 +43,14 @@
         down5: down5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
             bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
             label = "DOWN5";
         };
         up10: up10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
             bindings = <&kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP>;
             label = "UP10";
         };
@@ -55,6 +58,7 @@
         down10: down10 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
             bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
             label = "DOWN10";
         };
