@@ -215,7 +215,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans  &trans       &trans    &trans         &trans   &kp LA(BACKSPACE)
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                                  &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp N0   &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                                   &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp N0   &trans
 &trans      &kp LSHFT     &none         &none         &trans        &none                                   &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp DEL  &kp SQT
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans      &trans  &trans       &trans    &trans         &trans   &trans
                           &trans        &trans        &bootloader   &trans        &sys_reset    &sys_reset  &trans  &bootloader  &trans    &trans
@@ -236,7 +236,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                          &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans      &kp LSHFT     &none         &none         &trans        &none                           &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
@@ -257,7 +257,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to 0                         &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans      &none         &kp LSHFT     &none         &trans        &none                           &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
