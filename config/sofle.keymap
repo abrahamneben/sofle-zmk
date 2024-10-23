@@ -15,9 +15,7 @@
 #define MODCTRL 4
 #define MODCMD 5
 
-&sk {
-    release-after-ms = <2000>;
-};
+&sk { release-after-ms = <2000>; };
 
 / {
     combos {
@@ -95,7 +93,6 @@
             bindings = <&to MODCMD>;
             key-positions = <19 20>;
         };
-
     };
 
     macros {
@@ -161,11 +158,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9    &kp N0    &mt MINUS BACKSPACE
-&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                            &kp Y     &kp U     &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H     &kp J     &kp K      &kp L     &kp SEMI  &mt SQT SPACE
-&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N     &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &kp SPACE   &kp ESC       &kp CAPS  &kp SPACE  &kp RBKT  &kp BSLH   &kp RGUI
+&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &mt MINUS BACKSPACE
+&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                              &kp Y      &kp U     &kp I      &kp O     &kp P     &kp LBKT
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                              &kp H      &kp J     &kp K      &kp L     &kp SEMI  &mt SQT SPACE
+&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none     &kp N      &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                             &kp LGUI  &kp LALT  &kp EQUAL  &kp SPACE  &kp ESC       &kp CAPS  &kp SPACE  &kp RBKT  &kp BSLH   &kp RGUI
             >;
 
             sensor-bindings =
@@ -189,11 +186,11 @@
         mod_layer {
             display-name = "MOD";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset  &bootloader                            &bootloader       &sys_reset       &trans    &trans         &trans  &kp BACKSPACE
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to BASE                                   &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
-&trans      &kp LSHFT     &none         &none         &trans        &none                                   &down5       &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans      &trans       &trans       &trans    &trans         &trans  &trans
-                          &trans        &trans        &trans        &trans   &trans    &trans  &trans  &trans       &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset   &bootloader                    &bootloader  &sys_reset   &trans    &trans         &trans  &kp BACKSPACE
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans       &to BASE                       &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
+&trans      &kp LSHFT     &none         &none         &trans       &none                          &down5       &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
+&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE  &trans       &trans    &trans  &trans       &trans       &trans    &trans         &trans  &trans
+                          &trans        &trans        &trans       &trans       &trans    &trans  &trans       &trans       &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -203,7 +200,7 @@
             display-name = "OPT";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &kp LA(BACKSPACE)
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to BASE                           &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to BASE                        &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans      &kp LSHFT     &none         &none         &trans        &none                           &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
@@ -216,7 +213,7 @@
             display-name = "CTRL";
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to BASE                           &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to BASE                        &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans      &none         &kp LSHFT     &none         &trans        &none                           &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans   &trans        &trans    &trans
@@ -228,11 +225,11 @@
         modcmd_layer {
             display-name = "CMD";
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &to BASE                            &kp Y     &kp U     &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H     &kp J     &kp K      &kp L     &kp SEMI  &kp SPACE
-&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N     &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &kp CAPS  &kp RBKT  &kp BSLH   &kp RGUI
+&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7     &kp N8         &kp N9       &kp N0    &kp MINUS
+&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &to BASE                           &kp LG(Y)  &kp LG(U)  &kp I          &kp O        &kp P     &kp LBKT
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                              &kp H      &kp J      &kp K          &kp L        &kp SEMI  &kp SPACE
+&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B     &kp C_MUTE    &none      &kp N      &kp M      &kp LG(COMMA)  &kp LG(DOT)  &kp FSLH  &kp RSHFT
+                             &kp LGUI  &kp LALT  &kp EQUAL  &none     &kp ESC       &kp SPACE  &kp CAPS   &kp RBKT   &kp BSLH       &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
