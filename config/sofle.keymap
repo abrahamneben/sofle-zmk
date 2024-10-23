@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
 #define LOWER 1
@@ -62,18 +61,13 @@
 
         sticky_option_shift {
             timeout-ms = <50>;
-            bindings = <&sk LEFT_SHIFT &sk LEFT_ALT>;
+            bindings = <&sticky_alt_shift>;
             key-positions = <30 32>;
         };
 
         spotlight {
             bindings = <&spotlight>;
             key-positions = <28 31>;
-        };
-
-        hold_command {
-            bindings = <&kt LEFT_COMMAND>;
-            key-positions = <20 19>;
         };
 
         hold_mod {
@@ -91,19 +85,13 @@
             key-positions = <13 16>;
         };
 
-        lower_layer {
-            bindings = <&mo 1>;
-            key-positions = <39 40>;
-        };
-
         sticky_command_shift {
-            bindings = <&sk LEFT_SHIFT &sk LEFT_META>;
+            bindings = <&sticky_command_shift>;
             key-positions = <45 46>;
         };
     };
 
     macros {
-
         rt_arrov: rt_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -158,6 +146,20 @@
             bindings = <&kp LG(SPACE)>;
             label = "SPOTLIGHT";
         };
+
+        sticky_alt_shift: alt_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT &sk LEFT_ALT>;
+            label = "ALT_SHIFT";
+        };
+
+        sticky_command_shift: command_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_COMMAND &sk LEFT_SHIFT>;
+            label = "COMMAND_SHIFT";
+        };
     };
 
     keymap {
@@ -166,11 +168,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                            &kp Y   &kp U     &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SPACE
-&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &kp CAPS   &kp RBKT  &kp BSLH   &kp RGUI
+&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                            &kp Y     &kp U     &kp I      &kp O     &kp P     &kp LBKT
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H     &kp J     &kp K      &kp L     &kp SEMI  &kp SPACE
+&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N     &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &kp CAPS  &kp RBKT  &kp BSLH   &kp RGUI
             >;
 
             sensor-bindings =
