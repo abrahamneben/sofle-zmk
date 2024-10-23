@@ -23,7 +23,7 @@
         space_or_underscore: space_or_underscore {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp MINUS>;
+            bindings = <&kp SPACE>, <&kp SQT>;
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
