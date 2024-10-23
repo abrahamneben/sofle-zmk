@@ -161,11 +161,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6    &kp N7    &kp N8     &kp N9    &kp N0    &mt MINUS BACKSPACE
 &mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                            &kp Y     &kp U     &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H     &kp J     &kp K      &kp L     &kp SEMI  &kp SPACE
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H     &kp J     &kp K      &kp L     &kp SEMI  &mt SQT SPACE
 &kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N     &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &kp CAPS  &kp RBKT  &kp BSLH   &kp RGUI
+                             &kp LGUI  &kp LALT  &kp EQUAL  &kb SPACE   &kp ESC       &kp CAPS  &kp SPACE  &kp RBKT  &kp BSLH   &kp RGUI
             >;
 
             sensor-bindings =
@@ -189,11 +189,11 @@
         mod_layer {
             display-name = "MOD";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                            &trans       &trans       &trans    &trans         &trans  &kp BACKSPACE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &sys_reset  &bootloader                            &bootloader       &sys_reset       &trans    &trans         &trans  &kp BACKSPACE
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &to BASE                                   &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
 &trans      &kp LSHFT     &none         &none         &trans        &none                                   &down5       &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans      &trans       &trans       &trans    &trans         &trans  &trans
-                          &trans        &trans        &trans        &bootloader   &sys_reset    &sys_reset  &bootloader  &trans       &trans    &trans
+                          &trans        &trans        &trans        &trans   &trans    &trans  &trans  &trans       &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
