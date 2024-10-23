@@ -55,19 +55,19 @@
 
         sticky_command_control {
             timeout-ms = <50>;
-            bindings = <&sk LEFT_COMMAND(LEFT_CONTROL)>;
+            bindings = <&sk LC(LEFT_COMMAND)>;
             key-positions = <31 34>;
         };
 
         sticky_option_shift {
             timeout-ms = <50>;
-            bindings = <&sk LEFT_ALT(LEFT_SHIFT)>;
+            bindings = <&sk LS(LEFT_ALT)>;
             key-positions = <30 32>;
         };
 
         sticky_command_shift {
             timeout-ms = <50>;
-            bindings = <&sk LEFT_COMMAND(LEFT_SHIFT)>;
+            bindings = <&sk LS(LEFT_COMMAND)>;
             key-positions = <45 46>;
         };
 
@@ -77,22 +77,22 @@
         };
 
         hold_mod {
-            bindings = <&to 2>;
+            bindings = <&to MOD>;
             key-positions = <15 16>;
         };
 
         hold_modopt {
-            bindings = <&to 3>;
+            bindings = <&to MODOPT>;
             key-positions = <14 16>;
         };
 
         hold_modctrl {
-            bindings = <&to 4>;
+            bindings = <&to MODCTRL>;
             key-positions = <13 16>;
         };
 
         hold_modcmd {
-            bindings = <&to 4>;
+            bindings = <&to MODCMD>;
             key-positions = <19 20>;
         };
 
