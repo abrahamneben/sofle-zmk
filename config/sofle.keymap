@@ -170,8 +170,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp PG_DN PG_UP>,
-                <&inc_dec_kp PG_UP PG_DN>;
+                <&inc_dec_kp DOWN UP>,
+                <&inc_dec_kp UP DOWN>;
         };
 
         lower_layer {
