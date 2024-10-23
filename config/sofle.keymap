@@ -17,10 +17,6 @@
 
 &sk { release-after-ms = <2000>; };
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
