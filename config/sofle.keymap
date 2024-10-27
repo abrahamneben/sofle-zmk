@@ -198,8 +198,8 @@
         mod_layer {
             display-name = "MOD";
             bindings = <
-&trans      &trans        &trans        &trans        &sys_reset   &bootloader                    &bootloader  &sys_reset   &trans    &trans         &trans  &kp BACKSPACE
-&out OUT_USB &trans       &kp PSCRN     &kp K_CMENU   &trans       &to BASE                       &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
+&trans      &trans        &trans        &trans        &trans   &trans                    &trans  &trans   &trans    &trans         &trans  &kp BACKSPACE
+&trans       &trans       &kp PSCRN     &kp K_CMENU   &trans       &to BASE                       &up5         &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
 &trans      &kp LSHFT     &none         &none         &trans       &none                          &down5       &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE  &trans       &trans    &trans  &trans       &trans       &trans    &trans         &trans  &trans
                           &trans        &trans        &trans       &trans       &trans    &trans  &trans       &trans       &trans    &trans
