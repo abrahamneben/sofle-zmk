@@ -18,6 +18,10 @@
 #define MODCTRL 4
 #define MODCMD 5
 
+&nice_view_spi {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
+
 &sk { release-after-ms = <2000>; };
 
 / {
@@ -252,4 +256,4 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
-};
+};;aff
