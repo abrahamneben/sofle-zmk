@@ -117,7 +117,7 @@
 
         modfcn_layer {
             bindings = <&mo 6>;
-            key-positions = <57 58>;
+            key-positions = <>;
         };
 
         esc {
@@ -266,11 +266,11 @@
 
         modfcn_layer {
             bindings = <
-&trans  &trans  &trans   &trans  &trans  &screenshot                    &none   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp ESC  &trans  &trans  &trans                         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans   &trans  &trans  &trans       &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &none                     &none   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp ESC  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
