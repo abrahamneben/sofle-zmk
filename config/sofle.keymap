@@ -266,6 +266,7 @@
         };
 
         modfcn_layer {
+            display-name = "FCN";
             bindings = <
 &trans  &trans  &trans   &trans  &trans  &trans                     &trans   &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
