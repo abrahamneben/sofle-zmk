@@ -218,7 +218,7 @@
             bindings = <
 &trans         &trans      &trans     &trans       &trans       &trans                    &trans  &trans       &trans    &trans         &trans  &kp BACKSPACE
 &trans         &trans      &kp PSCRN  &kp K_CMENU  &trans       &to BASE                     &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
-&kp LS(ENTER)  &kp LSHFT   &none      &none        &trans       &none                     &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
+&kp LS(ENTER)  &kp LSHFT   &none      &none        &trans       &none                     &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp LS(ENTER)   &kp SQT
 &trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans  &trans       &trans    &trans         &trans  &trans
                            &trans     &trans       &trans       &trans  &trans    &trans  &trans  &trans       &trans    &trans
             >;
