@@ -190,11 +190,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &mt MINUS BACKSPACE
-&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &kp T                              &kp Y      &kp U     &kp I      &kp O     &kp P     &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                              &kp H      &kp J     &kp K      &kp L     &kp SEMI  &space_or_underscore
-&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none     &kp N      &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &kp SPACE  &kp ESC       &kp CAPS  &kp SPACE  &kp RBKT  &kp BSLH   &kp RGUI
+&kp GRAVE            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5                             &kp N6     &kp N7  &kp N8    &kp N9    &kp N0  &mt MINUS BACKSPACE
+&mt LC(TAB) TAB      &kp SEMI  &kp COMMA  &kp DOT    &kp P      &kp B                              &kp Y      &kp L   &kp U     &kp J     &kp Q   &kp FSLH
+&mt LC(LS(TAB)) RET  &kp A     &kp R      &kp S      &kp T      &kp G                              &kp M      &kp N   &kp E     &kp I     &kp O   &space_or_underscore
+&kp LSHFT            &kp SQT   &kp C      &kp F      &kp D      &kp X      &kp C_MUTE    &none     &kp K      &kp H   &kp W     &kp V     &kp Z   &kp RSHFT
+                               &kp LGUI   &kp POUND  &kp EQUAL  &kp SPACE  &kp ESC       &kp CAPS  &kp SPACE  &kp AT  &kp BSLH  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP>, <&inc_dec_kp UP DOWN>;
@@ -204,7 +204,7 @@
             display-name = "LOW";
             bindings = <
 &out OUT_USB       &out OUT_BLE      &bt BT_CLR       &bt BT_SEL 0    &sys_reset  &bootloader                    &bootloader  &sys_reset  &kp F8     &kp F9     &kp F10   &kp F11
-&ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &kp N4      &to BASE                         &kp N6       &kp N7      &kp N8     &kp N9     &kp N0    &kp F12
+&ext_power EP_OFF  &ext_power EP_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &kp N4      &to BASE                       &kp N6       &kp N7      &kp N8     &kp N9     &kp N0    &kp F12
 &trans             &trans            &none            &none           &none       &kp PRCNT                      &kp CARET    &kp AMPS    &kp ASTRK  &kp LPAR   &kp RPAR  &kp PIPE
 &trans             &kp EQUAL         &kp MINUS        &kp PLUS        &kp LBRC    &kp RBRC     &trans    &trans  &kp LBKT     &kp RBKT    &kp SEMI   &kp COLON  &kp BSLH  &trans
                                      &trans           &trans          &trans      &trans       &trans    &trans  &trans       &trans      &trans     &trans
@@ -216,11 +216,11 @@
         mod_layer {
             display-name = "MOD";
             bindings = <
-&trans         &trans      &trans     &trans       &trans       &trans                    &trans  &trans       &trans    &trans         &trans  &kp BACKSPACE
-&trans         &trans      &kp PSCRN  &kp K_CMENU  &trans       &to BASE                     &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp LS(SQT)
-&kp LS(ENTER)  &kp LSHFT   &none      &none        &trans       &none                     &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp LS(ENTER)   &kp SQT
-&trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans  &trans       &trans    &trans         &trans  &trans
-                           &trans     &trans       &trans       &trans  &trans    &trans  &trans  &trans       &trans    &trans
+&trans         &trans      &trans     &trans       &trans       &trans                      &trans  &trans       &trans    &trans         &trans         &kp BACKSPACE
+&trans         &trans      &kp PSCRN  &kp K_CMENU  &trans       &to BASE                    &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none          &kp LS(SQT)
+&kp LS(ENTER)  &kp LSHFT   &none      &none        &trans       &none                       &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp LS(ENTER)  &kp SQT
+&trans         &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans  &trans       &trans    &trans         &trans         &trans
+                           &trans     &trans       &trans       &trans    &trans    &trans  &trans  &trans       &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -229,11 +229,11 @@
         modopt_layer {
             display-name = "OPT";
             bindings = <
-&trans  &trans      &trans     &trans       &trans       &trans                    &trans   &trans        &trans    &trans         &trans  &kp LA(BACKSPACE)
-&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &to BASE                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
-&trans  &kp LSHFT   &none      &none        &trans       &none                     &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
-                    &trans     &trans       &trans       &trans  &trans    &trans  &trans   &trans        &trans    &trans
+&trans  &trans      &trans     &trans       &trans       &trans                      &trans   &trans        &trans    &trans         &trans  &kp LA(BACKSPACE)
+&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &to BASE                    &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans  &kp LSHFT   &none      &none        &trans       &none                       &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
+&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
+                    &trans     &trans       &trans       &trans    &trans    &trans  &trans   &trans        &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -242,11 +242,11 @@
         modctrl_layer {
             display-name = "CTRL";
             bindings = <
-&trans  &trans      &trans     &trans       &trans       &trans                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
-&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &to BASE                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
-&trans  &none       &kp LSHFT  &none        &trans       &none                     &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
-                    &trans     &trans       &trans       &trans  &trans    &trans  &trans   &trans        &trans    &trans
+&trans  &trans      &trans     &trans       &trans       &trans                      &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
+&trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &to BASE                    &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans  &none       &kp LSHFT  &none        &trans       &none                       &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
+&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans    &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
+                    &trans     &trans       &trans       &trans    &trans    &trans  &trans   &trans        &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -255,11 +255,11 @@
         modcmd_layer {
             display-name = "CMD";
             bindings = <
-&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8         &kp N9       &kp N0        &kp MINUS
-&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &to BASE                            &kp LG(Y)  &kp LG(U)  &kp I          &kp O        &kp P         &kp LBKT
-&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H      &kp J      &kp K          &kp L        &kp SEMI      &kp SPACE
-&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &none      &kp N      &kp M      &kp LG(COMMA)  &kp LG(DOT)  &kp LG(FSLH)  &kp RSHFT
-                             &kp LGUI  &kp LALT  &kp EQUAL  &none   &kp ESC       &kp SPACE  &kp CAPS   &kp RBKT   &kp BSLH       &kp RGUI
+&kp GRAVE            &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                             &kp N6     &kp N7     &kp N8         &kp N9       &kp N0        &kp MINUS
+&mt LC(TAB) TAB      &kp Q   &kp W     &kp E     &kp R      &to BASE                           &kp LG(Y)  &kp LG(U)  &kp I          &kp O        &kp P         &kp LBKT
+&mt LC(LS(TAB)) RET  &kp A   &kp S     &kp D     &kp F      &kp G                              &kp H      &kp J      &kp K          &kp L        &kp SEMI      &kp SPACE
+&kp LSHFT            &kp Z   &kp X     &kp C     &kp V      &kp B     &kp C_MUTE    &none      &kp N      &kp M      &kp LG(COMMA)  &kp LG(DOT)  &kp LG(FSLH)  &kp RSHFT
+                             &kp LGUI  &kp LALT  &kp EQUAL  &none     &kp ESC       &kp SPACE  &kp CAPS   &kp RBKT   &kp BSLH       &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -268,7 +268,7 @@
         modfcn_layer {
             display-name = "FCN";
             bindings = <
-&trans  &trans  &trans   &trans  &trans  &trans                     &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp ESC  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
