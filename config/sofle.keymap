@@ -116,14 +116,19 @@
             key-positions = <37 38 39 40>;
         };
 
-        modfcn_layer {
-            bindings = <&mo MODFCN>;
-            key-positions = <>;
-        };
-
         esc {
             bindings = <&kp ESC>;
             key-positions = <29 30>;
+        };
+
+        num {
+            bindings = <&mo 6>;
+            key-positions = <39 40>;
+        };
+
+        num_r {
+            bindings = <&mo 6>;
+            key-positions = <45 46>;
         };
     };
 
