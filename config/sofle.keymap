@@ -243,7 +243,7 @@
             display-name = "CTRL";
             bindings = <
 &trans  &trans      &trans     &trans       &trans       &trans                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
-&trans  &none       &kp PSCRN  &kp K_CMENU  &trans       &to 0                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans  &none       &none  &none  &trans       &to 0                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans  &none       &kp LSHFT  &none        &trans       &none                     &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
 &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                     &trans     &trans       &trans       &trans  &trans    &trans  &trans   &trans        &trans    &trans
@@ -268,12 +268,13 @@
         num_layer {
             display-name = "NUM";
             bindings = <
-&trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp ESC  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans    &trans         &trans     &trans                           &trans        &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOLLAR  &kp LPAR  &kp PERCENT    &kp RPAR   &kp EQUAL                        &kp PLUS      &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &kp TILDE   &kp LBKT  &kp AMPERSAND  &kp RBKT   &kp BACKSLASH                    &kp ASTERISK  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &kp EXCL    &kp LBRC  &kp MINUS      &kp RBRC   &kp PIPE       &trans    &trans  &kp MINUS     &kp N1  &kp N2  &kp N3  &none   &trans
+                    &trans    &trans         &kp GRAVE  &trans         &trans    &trans  &trans        &trans  &trans  &trans
             >;
         };
+
     };
 };
