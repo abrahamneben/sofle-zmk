@@ -232,7 +232,7 @@
 &trans  &trans      &trans     &trans       &trans       &trans                    &trans   &trans        &trans    &trans         &trans  &kp LA(BACKSPACE)
 &trans  &kp INS     &kp PSCRN  &kp K_CMENU  &trans       &to 0                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans  &kp LSHFT   &none      &none        &trans       &none                     &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
+&trans  &none  &none  &none   &none  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                     &trans     &trans       &trans       &trans  &trans    &trans  &trans   &trans        &trans    &trans
             >;
 
@@ -245,7 +245,7 @@
 &trans  &trans      &trans     &trans       &trans       &trans                    &trans   &trans        &trans    &trans         &trans  &kp LC(BACKSPACE)
 &trans  &none       &none  &none  &trans       &to 0                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
 &trans  &none       &kp LSHFT  &none        &trans       &none                     &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
+&trans  &kp K_UNDO  &none  &none   &none  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                     &trans     &trans       &trans       &trans  &trans    &trans  &trans   &trans        &trans    &trans
             >;
 
