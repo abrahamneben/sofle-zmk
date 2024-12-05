@@ -28,7 +28,7 @@
         space_or_underscore: space_or_underscore {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp SQT>;
+            bindings = <&kp SPACE>, <&kp UNDER>;
 
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
@@ -125,6 +125,11 @@
             bindings = <&mo 6>;
             key-positions = <45 46>;
         };
+
+        lowerright {
+            bindings = <&mo 1>;
+            key-positions = <45 46 47 48>;
+        };
     };
 
     macros {
@@ -217,8 +222,8 @@
             display-name = "MOD";
             bindings = <
 &trans         &trans     &trans  &trans  &trans  &trans                    &trans  &trans       &trans    &trans         &trans         &kp BACKSPACE
-&trans         &trans     &none   &none   &trans  &to 0                     &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none          &kp LS(SQT)
-&kp LS(ENTER)  &kp LSHFT  &none   &none   &trans  &none                     &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp LS(ENTER)  &kp SQT
+&trans         &trans     &none   &none   &trans  &to 0                     &up5    &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none          &none
+&kp LS(ENTER)  &kp LSHFT  &none   &none   &trans  &none                     &down5  &kp LEFT     &kp DOWN  &kp RIGHT      &kp LS(ENTER)  &kp MINUS
 &trans         &none      &none   &none   &none   &trans  &trans    &trans  &trans  &trans       &trans    &trans         &trans         &trans
                           &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans       &trans    &trans
             >;
@@ -230,7 +235,7 @@
             display-name = "OPT";
             bindings = <
 &trans  &trans      &trans     &trans      &trans       &trans                    &trans   &trans        &trans    &trans         &trans  &kp LA(BACKSPACE)
-&trans  &none       &none      &none       &trans       &to 0                     &up10    &kp HOME      &kp UP    &kp END        &kp N0  &trans
+&trans  &none       &none      &none       &trans       &to 0                     &up10    &kp HOME      &kp UP    &kp END        &none   &trans
 &trans  &kp LSHFT   &none      &none       &trans       &none                     &down10  &kp LA(LEFT)  &kp DOWN  &kp LA(RIGHT)  &none   &rt_arrov
 &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans  &trans    &trans  &trans   &trans        &trans    &trans         &trans  &trans
                     &trans     &trans      &trans       &trans  &trans    &trans  &trans   &trans        &trans    &trans
@@ -242,10 +247,10 @@
         modctrl_layer {
             display-name = "CTRL";
             bindings = <
-&none  &none       &none      &none       &none        &none                  &none    &none         &none     &none          &none   &kp LC(BACKSPACE)
-&none  &none       &none      &none       &none        &to 0                  &up10    &kp HOME      &kp UP    &kp END        &kp N0  &none
-&none  &none       &kp LSHFT  &none       &none        &none                  &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none   &dbl_dash
-&none  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none  &none    &none  &none    &none         &none     &none          &none   &none
+&none  &none       &none      &none       &none        &none                  &none    &none         &none     &none          &none  &kp LC(BACKSPACE)
+&none  &none       &none      &none       &none        &to 0                  &up10    &kp HOME      &kp UP    &kp END        &none  &none
+&none  &none       &kp LSHFT  &none       &none        &none                  &down10  &kp LC(LEFT)  &kp DOWN  &kp LC(RIGHT)  &none  &dbl_dash
+&none  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &none  &none    &none  &none    &none         &none     &none          &none  &none
                    &none      &none       &none        &none  &none    &none  &none    &none         &none     &none
             >;
 
@@ -271,7 +276,7 @@
 &trans  &trans      &trans    &trans         &trans     &trans                           &trans        &trans     &trans    &trans  &trans  &trans
 &trans  &kp DOLLAR  &kp LPAR  &kp PERCENT    &kp RPAR   &kp EQUAL                        &kp PLUS      &kp N7     &kp N8    &kp N9  &trans  &trans
 &trans  &kp TILDE   &kp LBKT  &kp AMPERSAND  &kp RBKT   &kp BACKSLASH                    &kp ASTERISK  &kp N4     &kp N5    &kp N6  &trans  &trans
-&trans  &kp EXCL    &kp LBRC  &kp MINUS      &kp RBRC   &kp PIPE       &trans    &trans  &kp MINUS     &kp N1     &kp N2    &kp N3  &none   &trans
+&trans  &kp EXCL    &kp LBRC  &kp MINUS      &kp RBRC   &kp PIPE       &trans    &trans  &kp NUMBER_0  &kp N1     &kp N2    &kp N3  &none   &trans
                     &trans    &trans         &kp GRAVE  &trans         &trans    &trans  &trans        &kp CARET  &kp PIPE  &trans
             >;
         };
