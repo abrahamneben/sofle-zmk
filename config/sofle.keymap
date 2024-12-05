@@ -116,14 +116,14 @@
             key-positions = <37 38 39 40>;
         };
 
-        modfcn_layer {
+        num_left {
             bindings = <&mo 6>;
-            key-positions = <>;
+            key-positions = <39 40>;
         };
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <29 30>;
+        num_right {
+            bindings = <&mo 6>;
+            key-positions = <45 46>;
         };
     };
 
@@ -265,8 +265,8 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        modfcn_layer {
-            display-name = "FCN";
+        num_layer {
+            display-name = "NUM";
             bindings = <
 &trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
