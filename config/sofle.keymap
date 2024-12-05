@@ -190,11 +190,11 @@
         default_layer {
             display-name = "default";
             bindings = <
-&kp DLLR             &kp AMPS  &kp LBKT   &kp LBRC  &kp RBRC   &kp LPAR                        &kp EQUAL  &kp STAR  &kp RPAR  &kp PLUS  &kp RBKT  &mt EXCL BACKSPACE
-&mt LC(TAB) TAB      &kp SEMI  &kp COMMA  &kp DOT   &kp P      &kp Y                           &kp F      &kp G     &kp C     &kp R     &kp L     &kp FSLH
-&mt LC(LS(TAB)) RET  &kp A     &kp O      &kp E     &kp U      &kp I                           &kp D      &kp H     &kp T     &kp N     &kp S     &space_or_underscore
-&kp LSHFT            &kp SQT   &kp Q      &kp J     &kp K      &kp X      &kp B      &none     &kp B      &kp M     &kp W     &kp V     &kp Z     &kp RSHFT
-                               &kp LGUI   &kp LALT  &kp EQUAL  &kp SPACE  &kp ESC    &kp CAPS  &kp SPACE  &kp RBKT  &kp BSLH  &kp RGUI
+&kp DLLR             &kp AMPS  &kp LBKT   &kp LBRC  &kp RBRC  &kp LPAR                        &kp EQUAL  &kp STAR  &kp RPAR  &kp PLUS  &kp RBKT  &mt EXCL BACKSPACE
+&mt LC(TAB) TAB      &kp SEMI  &kp COMMA  &kp DOT   &kp P     &kp Y                           &kp F      &kp G     &kp C     &kp R     &kp L     &kp FSLH
+&mt LC(LS(TAB)) RET  &kp A     &kp O      &kp E     &kp U     &kp I                           &kp D      &kp H     &kp T     &kp N     &kp S     &space_or_underscore
+&kp LSHFT            &kp SQT   &kp Q      &kp J     &kp K     &kp X      &kp B      &none     &kp B      &kp M     &kp W     &kp V     &kp Z     &kp RSHFT
+                               &kp LGUI   &kp LALT  &kp HASH  &kp SPACE  &kp ESC    &kp CAPS  &kp SPACE  &kp AT    &kp BSLH  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN UP>, <&inc_dec_kp UP DOWN>;
@@ -268,11 +268,11 @@
         num_layer {
             display-name = "NUM";
             bindings = <
-&trans  &trans      &trans    &trans         &trans     &trans                           &trans        &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOLLAR  &kp LPAR  &kp PERCENT    &kp RPAR   &kp EQUAL                        &kp PLUS      &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &kp TILDE   &kp LBKT  &kp AMPERSAND  &kp RBKT   &kp BACKSLASH                    &kp ASTERISK  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &kp EXCL    &kp LBRC  &kp MINUS      &kp RBRC   &kp PIPE       &trans    &trans  &kp MINUS     &kp N1  &kp N2  &kp N3  &none   &trans
-                    &trans    &trans         &kp GRAVE  &trans         &trans    &trans  &trans        &trans  &trans  &trans
+&trans  &trans      &trans    &trans         &trans     &trans                           &trans        &trans     &trans    &trans  &trans  &trans
+&trans  &kp DOLLAR  &kp LPAR  &kp PERCENT    &kp RPAR   &kp EQUAL                        &kp PLUS      &kp N7     &kp N8    &kp N9  &trans  &trans
+&trans  &kp TILDE   &kp LBKT  &kp AMPERSAND  &kp RBKT   &kp BACKSLASH                    &kp ASTERISK  &kp N4     &kp N5    &kp N6  &trans  &trans
+&trans  &kp EXCL    &kp LBRC  &kp MINUS      &kp RBRC   &kp PIPE       &trans    &trans  &kp MINUS     &kp N1     &kp N2    &kp N3  &none   &trans
+                    &trans    &trans         &kp GRAVE  &trans         &trans    &trans  &trans        &kp CARET  &kp PIPE  &trans
             >;
         };
     };
